@@ -29,7 +29,7 @@ void LinkedList::putItemEnd(ItemType val){
         head->info=val;
         head->next= nullptr;
         head->info.Print();
-        cout<<"from PutItemEnd(from head)"<<endl;
+//        cout<<"from PutItemEnd(from head)"<<endl;
     } else {
         NodeType *temp=new NodeType;
         temp->info=val;
@@ -37,7 +37,7 @@ void LinkedList::putItemEnd(ItemType val){
         tail->next=temp;
         tail=temp;
         tail->info.Print();
-        cout<<"from PutItemEnd(from tail)"<<endl;
+//        cout<<"from PutItemEnd(from tail)"<<endl;
     }
     length++;
 }
