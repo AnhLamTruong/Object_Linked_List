@@ -26,8 +26,11 @@ public:
         else
             return EQUAL;
     };
+    int getValue() const{
+        return this->value;
+    }
     void Print() const{
-        cout << value << endl;
+        cout << value<<" ";
     };
     void Initialize(int number){
         this->value=number;
@@ -48,12 +51,12 @@ public:
     void putItemPlace(int index, ItemType val);
     void printAll();
     void deleteItem(ItemType val);
-    int getItem(int index);
+    ItemType getItem(int index);
 private:
     struct NodeType{
         ItemType info;
         //Pointer point to a next NodeType
-        NodeType *next;
+        NodeType *next{};
     };
     int length;
     NodeType *head;
