@@ -154,6 +154,31 @@ ItemType LinkedList::getItem(int index) {
     return n;
 }
 
+LinkedList LinkedList::operator+(const LinkedList &list) {
+    return LinkedList();
+}
+
+LinkedList LinkedList::operator-(const LinkedList &list) {
+    return LinkedList();
+}
+
+LinkedList LinkedList::operator-() {
+
+    return LinkedList();
+}
+
+bool LinkedList::operator==(const LinkedList &list) {
+    return false;
+}
+
+ostream &operator<<(ostream &input, const LinkedList &list) {
+    return <#initializer#>;
+}
+
+istream &operator>>(istream &input, const LinkedList &list) {
+    return <#initializer#>;
+}
+
 
 
 

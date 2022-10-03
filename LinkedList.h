@@ -42,6 +42,21 @@ private:
 
 class LinkedList{
 public:
+    //OVERLOAD//
+    //Union 2 Linked Lists(Binary)
+    LinkedList operator+(const LinkedList& list);
+    //Intersect of 2 Linked Lists(Binary)
+    LinkedList operator-(const LinkedList& list);
+    //Reverse a linked list(Unary)
+    LinkedList operator-();
+    //Compare 2 Linked List(Relation)
+    bool operator==(const LinkedList& list);
+    //Input a value to a Linked List(I/O)
+    friend istream &operator>>(istream &input, const LinkedList &list);
+    //Input a value to a Linked List(I/O)
+    friend ostream &operator<<(ostream &input, const LinkedList &list);
+
+
     //Constructor
     LinkedList();
     //Destructor
