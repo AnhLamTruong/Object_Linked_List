@@ -154,30 +154,47 @@ ItemType LinkedList::getItem(int index) {
     return n;
 }
 
-LinkedList LinkedList::operator+(const LinkedList &list) {
-    return LinkedList();
+LinkedList LinkedList::operator+(const LinkedList &other) {
+    this->tail->next=other.head;
+    return *this;
 }
 
-LinkedList LinkedList::operator-(const LinkedList &list) {
-    return LinkedList();
-}
-
-LinkedList LinkedList::operator-() {
-
-    return LinkedList();
+void LinkedList::operator-() {
+    NodeType* curr=head;
+    NodeType* prev = nullptr;
+    NodeType* next = nullptr;
+    while (curr != nullptr) {
+        // Store next
+        next = curr->next;
+        // Reverse current node's pointer
+        curr->next = prev;
+        // Move pointers one position ahead.
+        prev = curr;
+        curr = next;
+    }
+    head = prev;
 }
 
 bool LinkedList::operator==(const LinkedList &list) {
+
     return false;
 }
 
-ostream &operator<<(ostream &input, const LinkedList &list) {
-    return <#initializer#>;
+//Copy Constructor
+LinkedList::LinkedList(LinkedList &other) {
+    NodeType* curr1=this->head;
+    NodeType* curr2=other.head;
+
+
 }
 
-istream &operator>>(istream &input, const LinkedList &list) {
-    return <#initializer#>;
-}
+//ostream &operator<<(ostream &input, const LinkedList &list) {
+//    return <#initializer#>;
+//}
+//
+//istream &operator>>(istream &input, const LinkedList &list) {
+//    return <#initializer#>;
+//}
 
 
 

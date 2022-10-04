@@ -44,11 +44,9 @@ class LinkedList{
 public:
     //OVERLOAD//
     //Union 2 Linked Lists(Binary)
-    LinkedList operator+(const LinkedList& list);
-    //Intersect of 2 Linked Lists(Binary)
-    LinkedList operator-(const LinkedList& list);
+    LinkedList operator+(const LinkedList& other);
     //Reverse a linked list(Unary)
-    LinkedList operator-();
+    void operator-();
     //Compare 2 Linked List(Relation)
     bool operator==(const LinkedList& list);
     //Input a value to a Linked List(I/O)
@@ -61,6 +59,8 @@ public:
     LinkedList();
     //Destructor
     ~LinkedList();
+    //Copy Constructor
+    LinkedList(LinkedList &other);
     //Function Section
     void putItemEnd(ItemType val);
     void putItemPlace(int index, ItemType val);

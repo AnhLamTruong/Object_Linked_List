@@ -5,10 +5,34 @@
 #include "LinkedList.h"
 using namespace std;
 int main() {
-    ItemType AnhTestItemsType;
-    LinkedList AnhTestLinkedList;
-    LinkedList AnhTestLinkedList2;
-    -AnhTestLinkedList2;
+    ItemType test,test1,test2,test3,test4,test5;
+    test.Initialize(1);
+    test1.Initialize(2);
+    test2.Initialize(3);
+    test3.Initialize(4);
+    test4.Initialize(5);
+    test5.Initialize(6);
+
+    LinkedList link1;
+    LinkedList link2;
+    LinkedList link3;
+    link1.putItemEnd(test);
+    link1.putItemEnd(test1);
+    link1.putItemEnd(test2);
+    link1.putItemEnd(test3);
+    link1.putItemEnd(test4);
+    link1.putItemEnd(test5);
+    link2.putItemEnd(test);
+    link2.putItemEnd(test1);
+    link2.putItemEnd(test2);
+    link2.putItemEnd(test3);
+    link2.putItemEnd(test4);
+    link2.putItemEnd(test5);
+    link1.printAll();
+    -link1;
+    link1.printAll();
+    link3=link1+link2;
+    link3.printAll();
     return 0;
 }
 
